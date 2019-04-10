@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserListViewController.swift
 //  PhotoAlbum
 //
 //  Created by Onur Torna on 10.04.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
