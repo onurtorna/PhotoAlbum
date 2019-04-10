@@ -31,6 +31,9 @@
 		10A63CE4225E621000BEA745 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CE3225E621000BEA745 /* UserListViewModel.swift */; };
 		10A63CE7225E646100BEA745 /* UserListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CE6225E646100BEA745 /* UserListDataProtocol.swift */; };
 		10A63CE9225E646A00BEA745 /* UserListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CE8225E646A00BEA745 /* UserListDataController.swift */; };
+		10A63CEC225E687500BEA745 /* UserListRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CEB225E687500BEA745 /* UserListRoutingProtocol.swift */; };
+		10A63CEE225E688800BEA745 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CED225E688800BEA745 /* UserListRouter.swift */; };
+		10A63CF1225E68C600BEA745 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CF0225E68C600BEA745 /* UserDetailViewController.swift */; };
 		E41C1F8F007CA4660E323C86 /* Pods_PhotoAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219E5C37DA3697BB26750DCB /* Pods_PhotoAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		10A63CE3225E621000BEA745 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		10A63CE6225E646100BEA745 /* UserListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDataProtocol.swift; sourceTree = "<group>"; };
 		10A63CE8225E646A00BEA745 /* UserListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDataController.swift; sourceTree = "<group>"; };
+		10A63CEB225E687500BEA745 /* UserListRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRoutingProtocol.swift; sourceTree = "<group>"; };
+		10A63CED225E688800BEA745 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		10A63CF0225E68C600BEA745 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		219E5C37DA3697BB26750DCB /* Pods_PhotoAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3B8A6FE5C62CD13C021FCC /* Pods-PhotoAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		C817A98AE9CD9503D8BC845E /* Pods-PhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				10A63CAE225E516300BEA745 /* UserList */,
+				10A63CEF225E68B100BEA745 /* UserDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -225,6 +232,7 @@
 		10A63CAE225E516300BEA745 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				10A63CEA225E686600BEA745 /* Router */,
 				10A63CE5225E62B700BEA745 /* Network */,
 				10A63C87225E4CB300BEA745 /* UserListViewController.swift */,
 				10A63CE3225E621000BEA745 /* UserListViewModel.swift */,
@@ -283,6 +291,23 @@
 				10A63CE8225E646A00BEA745 /* UserListDataController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		10A63CEA225E686600BEA745 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				10A63CEB225E687500BEA745 /* UserListRoutingProtocol.swift */,
+				10A63CED225E688800BEA745 /* UserListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		10A63CEF225E68B100BEA745 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				10A63CF0225E68C600BEA745 /* UserDetailViewController.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		1999F7CFAF3B20D6950694CA /* Pods */ = {
@@ -456,13 +481,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A63CBE225E593B00BEA745 /* ErrorHandler.swift in Sources */,
+				10A63CEC225E687500BEA745 /* UserListRoutingProtocol.swift in Sources */,
 				10A63CDD225E5F0B00BEA745 /* StoryboardLoadable.swift in Sources */,
+				10A63CEE225E688800BEA745 /* UserListRouter.swift in Sources */,
 				10A63CCF225E5AE300BEA745 /* APIRouter.swift in Sources */,
 				10A63C88225E4CB300BEA745 /* UserListViewController.swift in Sources */,
 				10A63CE7225E646100BEA745 /* UserListDataProtocol.swift in Sources */,
 				10A63CC3225E597900BEA745 /* NetworkManager.swift in Sources */,
 				10A63CCD225E5AAB00BEA745 /* APIClient.swift in Sources */,
 				10A63CE4225E621000BEA745 /* UserListViewModel.swift in Sources */,
+				10A63CF1225E68C600BEA745 /* UserDetailViewController.swift in Sources */,
 				10A63CD1225E5C7500BEA745 /* UserListResponse.swift in Sources */,
 				10A63CD9225E5E0200BEA745 /* Photo.swift in Sources */,
 				10A63CE9225E646A00BEA745 /* UserListDataController.swift in Sources */,

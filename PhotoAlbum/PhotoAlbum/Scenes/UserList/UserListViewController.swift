@@ -12,11 +12,13 @@ class UserListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let viewModel = UserListViewModel(dataController: UserListDataController())
+    var viewModel = UserListViewModel(dataController: UserListDataController())
+    var router: UserListRoutingProtocol = UserListRouter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserListCell.defaultNib,
                            forCellReuseIdentifier: UserListCell.defaultNibName)
@@ -46,6 +48,16 @@ private extension UserListViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension UserListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let user = viewModel.user(at: indexPath.row)
+        router.viewControllerDidRequestUserDetail(self, user: user)
+    }
+}
+
+// MARK: - UITableViewDataSource
 extension UserListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
