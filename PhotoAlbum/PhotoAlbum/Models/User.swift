@@ -10,5 +10,6 @@ import Foundation
 
 struct User: Codable {
     var id: String
+    var fullname: String
     var albums: [Album]?
 }
