@@ -1,5 +1,5 @@
 //
-//  UserListResponse.swift
+//  User.swift
 //  PhotoAlbum
 //
 //  Created by Onur Torna on 10.04.2019.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-final class UserListResponse: Response {
-
-    /// User list of application
-    var users: [User]?
+struct User: Codable {
+    var id: String
+    var albums: [Album]?
 }
-
