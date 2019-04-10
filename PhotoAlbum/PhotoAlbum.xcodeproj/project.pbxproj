@@ -26,6 +26,8 @@
 		10A63CD9225E5E0200BEA745 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CD8225E5E0200BEA745 /* Photo.swift */; };
 		10A63CDB225E5F0100BEA745 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CDA225E5F0100BEA745 /* NibLoadable.swift */; };
 		10A63CDD225E5F0B00BEA745 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CDC225E5F0B00BEA745 /* StoryboardLoadable.swift */; };
+		10A63CE0225E5FD000BEA745 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A63CDF225E5FD000BEA745 /* UserListCell.xib */; };
+		10A63CE2225E5FEF00BEA745 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A63CE1225E5FEF00BEA745 /* UserListCell.swift */; };
 		E41C1F8F007CA4660E323C86 /* Pods_PhotoAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219E5C37DA3697BB26750DCB /* Pods_PhotoAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		10A63CD8225E5E0200BEA745 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		10A63CDA225E5F0100BEA745 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		10A63CDC225E5F0B00BEA745 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		10A63CDF225E5FD000BEA745 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		10A63CE1225E5FEF00BEA745 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		219E5C37DA3697BB26750DCB /* Pods_PhotoAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3B8A6FE5C62CD13C021FCC /* Pods-PhotoAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		C817A98AE9CD9503D8BC845E /* Pods-PhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		10A63CA9225E511900BEA745 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				10A63CDE225E5FB400BEA745 /* Cells */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -252,6 +257,15 @@
 				10A63CD0225E5C7500BEA745 /* UserListResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		10A63CDE225E5FB400BEA745 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				10A63CDF225E5FD000BEA745 /* UserListCell.xib */,
+				10A63CE1225E5FEF00BEA745 /* UserListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		1999F7CFAF3B20D6950694CA /* Pods */ = {
@@ -354,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A63CE0225E5FD000BEA745 /* UserListCell.xib in Resources */,
 				10A63C90225E4CB400BEA745 /* LaunchScreen.storyboard in Resources */,
 				10A63C8D225E4CB400BEA745 /* Assets.xcassets in Resources */,
 				10A63C8B225E4CB300BEA745 /* UserList.storyboard in Resources */,
@@ -429,6 +444,7 @@
 				10A63CCD225E5AAB00BEA745 /* APIClient.swift in Sources */,
 				10A63CD1225E5C7500BEA745 /* UserListResponse.swift in Sources */,
 				10A63CD9225E5E0200BEA745 /* Photo.swift in Sources */,
+				10A63CE2225E5FEF00BEA745 /* UserListCell.swift in Sources */,
 				10A63CC0225E595C00BEA745 /* Network.swift in Sources */,
 				10A63C86225E4CB300BEA745 /* AppDelegate.swift in Sources */,
 				10A63CDB225E5F0100BEA745 /* NibLoadable.swift in Sources */,

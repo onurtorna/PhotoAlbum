@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="K1o-S5-hXr" customClass="UserListCell" customModule="PhotoAlbum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K1o-S5-hXr" id="eQg-qw-ImV">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-EO-Eiw">
+                        <rect key="frame" x="15" y="40.5" width="319" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yGk-ym-XkF">
+                        <rect key="frame" x="349" y="15.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="KhN-cZ-luf"/>
+                            <constraint firstAttribute="height" constant="50" id="pgl-GE-UDe"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TIN-EO-Eiw" firstAttribute="centerY" secondItem="yGk-ym-XkF" secondAttribute="centerY" id="Lxc-Mj-HsM"/>
+                    <constraint firstItem="TIN-EO-Eiw" firstAttribute="leading" secondItem="eQg-qw-ImV" secondAttribute="leading" constant="15" id="Sn1-cM-WQ4"/>
+                    <constraint firstItem="yGk-ym-XkF" firstAttribute="leading" secondItem="TIN-EO-Eiw" secondAttribute="trailing" constant="15" id="SnO-eg-Ezq"/>
+                    <constraint firstItem="yGk-ym-XkF" firstAttribute="top" secondItem="eQg-qw-ImV" secondAttribute="top" constant="15" id="akC-QZ-zxI"/>
+                    <constraint firstAttribute="trailing" secondItem="yGk-ym-XkF" secondAttribute="trailing" constant="15" id="mKF-wn-cjp"/>
+                    <constraint firstAttribute="bottom" secondItem="yGk-ym-XkF" secondAttribute="bottom" constant="15" id="tJm-8w-RdA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumCoverImageView" destination="yGk-ym-XkF" id="RQB-k2-4tp"/>
+                <outlet property="userNameLabel" destination="TIN-EO-Eiw" id="V4H-8P-FQ5"/>
+            </connections>
+            <point key="canvasLocation" x="-736.23188405797111" y="65.625"/>
+        </tableViewCell>
+    </objects>
+</document>
