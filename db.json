@@ -1,0 +1,24 @@
+{
+   "users":[
+      {
+         "id":"1234",
+         "fullname":"Onur Torna",
+         "albums":[
+            {
+               "id":"12",
+               "name":"My Album",
+               "photos":[
+                  {
+                     "id": "400",
+                     "url":"https://images.template.net/wp-content/uploads/2016/05/17050302/Album-Cover-Template.jpg"
+                  },
+                  {
+                     "id": "401",
+                     "url":"https://images.template.net/wp-content/uploads/2016/05/17050744/DJ-Album-Cover-Template-Sample.jpg"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
