@@ -59,8 +59,8 @@ extension UserListViewController: UITableViewDataSource {
         }
 
         let user = viewModel.user(at: indexPath.row)
-        cell.userNameLabel.text = user.fullname
-        // TODO: customize cell
+        cell.customizeCell(with: user)
+        
         return cell
     }
 }
