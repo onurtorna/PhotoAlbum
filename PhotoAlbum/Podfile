@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+use_frameworks!
+
+def photo_album
+    pod 'Alamofire', '~> 5.0.0-beta.3'
+end
+
+target 'PhotoAlbum' do
+    photo_album
+end
