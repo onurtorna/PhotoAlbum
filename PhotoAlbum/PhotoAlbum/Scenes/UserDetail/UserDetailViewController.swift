@@ -15,4 +15,31 @@ final class UserDetailViewController: UIViewController, StoryboardLoadable {
 
     static var defaultStoryboardName: String = "UserList"
 
+    var viewModel: UserDetailViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        viewModel.stateChangeHandler = applyState(_:)
+    }
+}
+
+// MARK: - Helpers
+private extension UserDetailViewController {
+
+    func applyState(_ change: UserDetailState.Change) {
+
+        switch change {
+        case .loading(let isLoading):
+            // TODO: Show/hide loading view
+            break
+
+        case .error(let receivedError):
+            // TODO: Show/hide error view
+            break
+
+        case .initial(name: let name):
+            userNameLabel.text = name
+        }
+    }
 }

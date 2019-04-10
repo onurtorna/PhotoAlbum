@@ -14,6 +14,8 @@ final class UserListRouter: UserListRoutingProtocol {
                                             user: User) {
 
         let detailViewController = UserDetailViewController.loadFromStoryboard()
+        let viewModel = UserDetailViewModel(user: user)
+        detailViewController.viewModel = viewModel
         viewController.navigationController?.pushViewController(detailViewController,
                                                                 animated: true)
     }
