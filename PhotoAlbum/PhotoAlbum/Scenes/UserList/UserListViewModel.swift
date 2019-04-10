@@ -43,6 +43,7 @@ final class UserListState {
 
 final class UserListViewModel {
 
+    private let dataController: UserListDataProtocol
     private let state = UserListState()
 
     /// State change handler
@@ -60,19 +61,23 @@ final class UserListViewModel {
         return state.users.count
     }
 
+    init(dataController: UserListDataProtocol) {
+        self.dataController = dataController
+    }
+
     func user(at index: Int) -> User {
         return state.users[index]
     }
 
     func fetchUsers() {
         state.isLoading = true
-        APIClient.userList { [weak self] (response, error) in
+        dataController.fetchUsers { [weak self] (users, error) in
             self?.state.isLoading = false
             self?.state.receivedError = error
             guard let self = self,
                 error == nil else { return }
 
-            self.state.users = response?.users ?? []
+            self.state.users = users ?? []
         }
     }
 }

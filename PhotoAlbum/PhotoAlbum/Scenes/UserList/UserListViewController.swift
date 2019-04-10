@@ -12,7 +12,7 @@ class UserListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let viewModel = UserListViewModel()
+    let viewModel = UserListViewModel(dataController: UserListDataController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
